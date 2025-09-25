@@ -1,0 +1,11 @@
+apiVersion: v1            # 올바른 apiVersion으로 변경(apps/v1 -> v1)
+kind: Pod 
+metadata:
+  name: web 
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      protocol: TCP

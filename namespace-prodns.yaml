@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2025-09-23T09:14:00Z"
+  labels:
+    kubernetes.io/metadata.name: prodns
+  name: prodns
+  resourceVersion: "25418"
+  uid: 3826d566-a664-45b6-a097-eb2507fc1318
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

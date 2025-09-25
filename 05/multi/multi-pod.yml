@@ -1,0 +1,20 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: multipod
+# 컨테이너가 두 개 만들어짐, nginx-container | centos-container
+# 컨테이너에 쉘 붙이기
+# k exec multipod -c nginx-container -it -- /bin/bash
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.14
+      ports:
+        - containerPort: 80
+    - name: centos-container
+      image: centos:7
+      command:
+        - sleep
+        - "86400"
+

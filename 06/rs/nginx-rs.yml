@@ -1,0 +1,29 @@
+---
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: nginx-rs
+spec:
+  # replicas: 
+  # selector:
+  # template:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: webui
+
+  # pod template
+  template:
+    # label은 metadata와 spec 모두 들어갈 수 있다.
+    # selector의 app과 이름이 같아야 한다
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.14
+          ports:
+            - containerPort: 80
+      

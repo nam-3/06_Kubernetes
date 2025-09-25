@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exec-liveness
+spec:
+  containers:
+  - name: liveness
+    image: registry.k8s.io/busybox
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 15; rm -f /tmp/healthy; sleep 300
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      # sleep 15초 간 3초에 한번씩 (3, 6, 9, ... ) 점검 
+      # => 만약 15초 이후에 3연속 실패 하면 위 작업 재실행
+      # 파일은 지워진 상태기 때문에 fail 발생할 것임
+      periodSeconds: 3
+      

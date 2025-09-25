@@ -1,0 +1,16 @@
+---
+# kubectl api-resource
+# 리소스 (첫번째 글자가 대문자여야 함)
+kind: Pod
+# 리소스 버전
+apiVersion: v1
+# 이름
+metadata: 
+  name: nginx-pod
+# 설정이 리스트 형식으로 들어감
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      ports:
+        - containerPort: 80

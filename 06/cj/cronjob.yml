@@ -1,0 +1,20 @@
+---
+kind: CronJob
+apiVersion: batch/v1
+metadata:
+  name: os-cj
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: os-container
+            image: busybox
+            args:
+              - /bin/sh
+              - -c
+              - echo HELLO ^OO^ ; sleep 10 ; echo BYE ㅠ00ㅠ
+          restartPolicy: OnFailure
+

@@ -1,0 +1,15 @@
+---
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: os-job
+spec:
+# replica, Selector 필요없음 pod template만 존재
+  template:
+    spec:
+      containers:
+      - name: os-container
+        image: centos:7
+        command: ["bash","-c","echo Hello OS; sleep 30 ; echo Bye OS"]
+      # 배치 작업은 restartpolicy 필요함 
+      restartPolicy: Never

@@ -1,0 +1,23 @@
+---
+kind: StatefulSet
+apiVersion: apps/v1
+# metadata에는 이름, labels, annotation 들어감
+metadata:
+  name: nginx-sts
+spec:
+  serviceName: "nginx"
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: mysts
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: mysts
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.14
+          ports:
+          - containerPort: 80

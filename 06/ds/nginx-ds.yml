@@ -1,0 +1,22 @@
+---
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: nginx-ds
+# DaemonSet은 ReplicaSet을 지정하지않는다
+spec:
+  selector:
+    matchLabels:
+      app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14
+        ports:
+        - containerPort: 80
+

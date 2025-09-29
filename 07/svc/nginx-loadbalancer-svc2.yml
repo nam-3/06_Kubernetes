@@ -1,0 +1,19 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-loadbalancer-svc
+spec:
+  type: LoadBalancer
+  clusterIP: 10.100.10.10
+  selector:
+    app: webapp
+  
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    # deploy의 container port
+
+    nodePort: 30000
+    

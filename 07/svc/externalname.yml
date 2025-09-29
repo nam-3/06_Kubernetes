@@ -1,0 +1,12 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: externalname-svc
+spec:
+  type: ExternalName
+  externalName: google.com
+  # google.com에 CNAME 으로 매핑하여
+  # 해당 서비스에 요청 하면 google.com에 연결
+
+  

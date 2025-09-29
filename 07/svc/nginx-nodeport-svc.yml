@@ -1,0 +1,18 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-nodeport-svc
+spec:
+  type: NodePort
+  clusterIP: 10.100.10.10
+  selector:
+    app: webapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30000			# 생략 가능(생략하면 Port 자동할당)
+    # targetPort는 deploy의 containerPort 지정해줘야됨
+
+

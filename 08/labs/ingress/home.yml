@@ -1,0 +1,46 @@
+# Deployment
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: home-deploy
+  namespace: testns # testns.yml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: home
+  # replicas, pod의 개수가 모자르다면
+  # 해당 template의 형식으로 pod를 띄우겠다
+  template:
+    metadata:
+      name: home-pod
+      labels:
+        name: home
+    spec:
+      containers:
+      - name: home-container
+        image: httpd
+        ports:
+        - containerPort: 80
+
+
+# Service- ClusterIP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: home-svc
+  namespace: testns
+spec:
+  type: ClusterIP
+  selector:
+    name: home
+  # 80 포트로 들어온다면
+  # home 라벨을 갖고있는 pod의
+  # 80 포트로 보내도록
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+

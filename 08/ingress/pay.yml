@@ -1,0 +1,45 @@
+# Deployment
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: pay-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pay
+  # replicas, pod의 개수가 모자르다면
+  # 해당 template의 형식으로 pod를 띄우겠다
+  template:
+    metadata:
+      name: pay-pod
+      labels:
+        app: pay
+    spec:
+      containers:
+      - name: pay-container
+        image: whatwant/node-web:2.0
+        ports:
+        - containerPort: 8080
+        # pod가 서비스할 포트는 8080이다
+
+
+# Service- ClusterIP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: pay-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: pay
+  # 80 포트로 들어온다면
+  # home 라벨을 갖고있는 pod의
+  # 8080 포트로 보내도록
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+

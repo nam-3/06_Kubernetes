@@ -1,0 +1,18 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-nodeselector
+spec:
+  nodeSelector:
+    gpu: "true"
+    disk: "ssd"
+  # 해당 설정을 모두 만족하는 node는 node1이 유일함
+  # * k label node node1 gpu=true disk=ssd
+  # 확인 : 해당 파일 실행 시 node1에 배정 받는가?
+
+  containers:
+    - name: nginx
+      image: nginx:1.14
+      ports:
+      - containerPort: 80

@@ -1,0 +1,5 @@
+mkdir -p ~/tools/{kubectx,kubens}
+
+sudo git clone https://github.com/ahmetb/kubectx ~/tools/kubectx
+sudo ln -sf ~/tools/kubectx/kubens /usr/local/bin/kubens
+sudo ln -sf ~/tools/kubectx/kubectx /usr/local/bin/kubectx

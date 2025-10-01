@@ -1,0 +1,18 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: wrong-pod-nodeselector
+spec:
+  # 아래 세가지 조건을 다 만족하는 노드는 없음
+  nodeSelector:
+    gpu: "true"
+    disk: "ssd"
+    mem: "high"
+  # 해당 컨테이너는 Pending 상태에 빠지게 된다
+
+  containers:
+    - name: nginx
+      image: nginx:1.14
+      ports:
+      - containerPort: 80

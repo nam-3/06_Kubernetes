@@ -15,9 +15,10 @@
 6. [워크로드 리소스](https://www.notion.so/6-2791400eefa580769e58dfca96cbe051?pvs=21)  
 7. [쿠버네티스 서비스](https://www.notion.so/7-27a1400eefa580dea62cf82ee0a98ae5?pvs=21)  
 8. [인그레스(Ingress)](https://www.notion.so/8-27d1400eefa5807e9eb2c27b77ba81ba?pvs=21)  
-9. [라벨과 어노테이션](https://www.notion.so/9-27e1400eefa58050bea1f9b3ff32b9c8?pvs=21)  
-10. [컨피그 맵(ConfigMap) *](https://www.notion.so/10-ConfigMap-27f1400eefa580a8b8d4fb38b9e75369?pvs=21)  
-
+9. [라벨과 어노테이션 *](https://www.notion.so/9-27e1400eefa58050bea1f9b3ff32b9c8?pvs=21)  
+10. [컨피그 맵(ConfigMap)](https://www.notion.so/10-ConfigMap-27f1400eefa580a8b8d4fb38b9e75369?pvs=21)  
+11. [11. 시크릿(Secret) *](https://www.notion.so/11-Secret-2801400eefa5804c95d0e7eff4f8ee33?pvs=21)
+12. [12. 스토리지(Storage) *](https://www.notion.so/12-Storage-2801400eefa5805685c3ce35bc5a1f3b?pvs=21)
 ---
 
 ## 📖 소개

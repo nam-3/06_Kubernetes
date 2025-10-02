@@ -1,0 +1,54 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mongodb-deployment
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      name: mongodb-pod
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:8.0.14
+        ports:
+        - containerPort: 27017
+        env:
+        # 시크릿에 정의 해둔 변수의 이름과 다름
+        - name: "MONGO_INITDB_ROOT_USERNAME"
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongodb-root-username
+        - name: "MONGO_INITDB_ROOT_PASSWORD"
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongodb-root-password
+
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongodb-service
+spec:
+  type: ClusterIP
+  # ClusterIP: 10.100.10.10
+  # 지금은 랜덤하게 선택되는것이 좋다
+  selector:
+    app: mongodb
+  ports:
+  # mongodb-service:27017 로 들어오면
+  - port: 27017
+    targetPort: 27017
+
+    

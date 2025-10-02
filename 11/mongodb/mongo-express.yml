@@ -1,0 +1,60 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mongodb-express
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-express
+  template:
+    metadata:
+      name: mongo-express-pod
+      labels:
+        app: mongo-express
+    spec:
+      containers:
+        - name: mongo-express
+          image: mongo-express:1.0.2-18
+          ports:
+          - containerPort: 8081
+          env:
+          # 환경변수의 키, 몽고db 접근 시 필요한 url
+          - name: ME_CONFIG_MONGODB_URL
+          # 환경변수의 값 은 configmap에서 참조하겠다
+          # 참조 파일의 변수 이름과 다르기 때문에
+          # 일부를 참조하여 데이터를 가져오겠다.
+          # 참조 파일의 변수 이름과 완전히 동일하다면
+          # 해당 참조 파일의 전체를 가져오면 된다
+            valueFrom:
+              configMapKeyRef:
+                name: mongodb-configmap
+                key: database_url
+          # 변수의 키
+          - name: ME_CONFIG_BASICAUTH_ENABLED
+          # 변수의 값 은 true
+            value: "true"
+          - name: ME_CONFIG_BASICAUTH_USERNAME
+            value: "admin"
+          - name: ME_CONFIG_BASICAUTH_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: mongodb-root-password
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongo-express-service
+spec:
+  # metallb
+  type: LoadBalancer
+  # clusterIP: 10.100.10.10
+  selector:
+    app: mongo-express
+  ports:
+  - port: 8081
+    targetPort: 8081
+  # nodePort: 30000

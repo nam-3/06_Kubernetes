@@ -16,3 +16,6 @@ spec:
   volumes:
   - name: html
     emptyDir: {}
+  # 인덱스 파일이 없는 상태이므로, 요청시 403
+  # kubectl exec empty-pod -it -- /bin/bash
+  # echo 'hello world' > /usr/share/nginx/html/index.html

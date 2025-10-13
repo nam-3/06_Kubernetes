@@ -1,0 +1,15 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-web
+spec:
+  # 볼륨 특성으로 선택 - 여러개가 있으면 그중 가장 좋은것
+  resources:
+    requests:
+      storage: 2Gi
+  accessModes:
+  - ReadWriteOnce
+  - ReadWriteMany
+  storageClassName: manual
+  volumeMode: Filesystem

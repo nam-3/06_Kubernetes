@@ -17,10 +17,14 @@
 8. [인그레스(Ingress)](https://www.notion.so/8-27d1400eefa5807e9eb2c27b77ba81ba?pvs=21)  
 9. [라벨과 어노테이션 *](https://www.notion.so/9-27e1400eefa58050bea1f9b3ff32b9c8?pvs=21)  
 10. [컨피그 맵(ConfigMap)](https://www.notion.so/10-ConfigMap-27f1400eefa580a8b8d4fb38b9e75369?pvs=21)  
-11. [11. 시크릿(Secret) *](https://www.notion.so/11-Secret-2801400eefa5804c95d0e7eff4f8ee33?pvs=21)
-12. [12. 스토리지(Storage) *](https://www.notion.so/12-Storage-2801400eefa5805685c3ce35bc5a1f3b?pvs=21)
-13. [13. 오토스케일링](https://www.notion.so/13-28b1400eefa5801a859fe1e62b14c4d2?pvs=21)
-14. [14. 파드 스케줄링](https://www.notion.so/14-28b1400eefa580948783d6aa34c33296?pvs=21)
+11. [시크릿(Secret) *](https://www.notion.so/11-Secret-2801400eefa5804c95d0e7eff4f8ee33?pvs=21)
+12. [스토리지(Storage)](https://www.notion.so/12-Storage-2801400eefa5805685c3ce35bc5a1f3b?pvs=21)
+13. [오토스케일링](https://www.notion.so/13-28b1400eefa5801a859fe1e62b14c4d2?pvs=21)
+14. [파드 스케줄링 *](https://www.notion.so/14-28b1400eefa580948783d6aa34c33296?pvs=21)
+15. [인증과 권한관리 *](https://www.notion.so/15-28c1400eefa5808c8ff1e3b6ba378c44?pvs=21)
+
+
+=> 노션 게시해야됨
 ---
 
 ## 📖 소개

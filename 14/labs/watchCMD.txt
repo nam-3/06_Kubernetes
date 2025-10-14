@@ -1,0 +1,1 @@
+kubectl get nodes -L disktype,gpu; echo ; kubectl get pod -o wide  

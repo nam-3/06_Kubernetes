@@ -22,9 +22,8 @@
 13. [오토스케일링](https://www.notion.so/13-28b1400eefa5801a859fe1e62b14c4d2?pvs=21)
 14. [파드 스케줄링 *](https://www.notion.so/14-28b1400eefa580948783d6aa34c33296?pvs=21)
 15. [인증과 권한관리 *](https://www.notion.so/15-28c1400eefa5808c8ff1e3b6ba378c44?pvs=21)
-15. [15. 인증과 권한관리](https://www.notion.so/15-28c1400eefa5808c8ff1e3b6ba378c44?pvs=21)
-16. [16. 헬름과 커스터마이즈](https://www.notion.so/16-28d1400eefa580f4b623d62590326e83?pvs=21)
-17. [17. 디버그 쉘](https://www.notion.so/17-28e1400eefa58052afa3e112816f3d3f?pvs=21)
+16. [헬름과 커스터마이즈](https://www.notion.so/16-28d1400eefa580f4b623d62590326e83?pvs=21)
+17. [디버그 쉘](https://www.notion.so/17-28e1400eefa58052afa3e112816f3d3f?pvs=21)
 
 [미니 프로젝트](https://www.notion.so/28e1400eefa58082bfdbd6d7976164df?pvs=21)
 

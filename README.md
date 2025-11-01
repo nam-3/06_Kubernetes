@@ -7,27 +7,26 @@
 
 ## 📚 목차
 
-1. [도커 & 쿠버네티스 소개](https://www.notion.so/1-2731400eefa5802b84c6d16aff216525?pvs=21)  
-2. [쿠버네티스 설치](https://www.notion.so/2-2731400eefa580f9a430ce1eae2e0aa2?pvs=21)  
-3. [시작하기 - 컨테이너 실행하기](https://www.notion.so/3-2761400eefa580139f18dbab34b57729?pvs=21)  
-4. [쿠버네티스 아키텍처](https://www.notion.so/4-2771400eefa580e08544cd37bdae99da?pvs=21)  
-5. [파드(Pod)](https://www.notion.so/5-Pod-2771400eefa580dfb08cce4e4828fa5b?pvs=21)  
-6. [워크로드 리소스](https://www.notion.so/6-2791400eefa580769e58dfca96cbe051?pvs=21)  
-7. [쿠버네티스 서비스](https://www.notion.so/7-27a1400eefa580dea62cf82ee0a98ae5?pvs=21)  
-8. [인그레스(Ingress)](https://www.notion.so/8-27d1400eefa5807e9eb2c27b77ba81ba?pvs=21)  
-9. [라벨과 어노테이션 *](https://www.notion.so/9-27e1400eefa58050bea1f9b3ff32b9c8?pvs=21)  
-10. [컨피그 맵(ConfigMap)](https://www.notion.so/10-ConfigMap-27f1400eefa580a8b8d4fb38b9e75369?pvs=21)  
-11. [시크릿(Secret) *](https://www.notion.so/11-Secret-2801400eefa5804c95d0e7eff4f8ee33?pvs=21)
-12. [스토리지(Storage)](https://www.notion.so/12-Storage-2801400eefa5805685c3ce35bc5a1f3b?pvs=21)
-13. [오토스케일링](https://www.notion.so/13-28b1400eefa5801a859fe1e62b14c4d2?pvs=21)
-14. [파드 스케줄링 *](https://www.notion.so/14-28b1400eefa580948783d6aa34c33296?pvs=21)
-15. [인증과 권한관리](https://www.notion.so/15-28c1400eefa5808c8ff1e3b6ba378c44?pvs=21)
-16. [헬름과 커스터마이즈](https://www.notion.so/16-28d1400eefa580f4b623d62590326e83?pvs=21)
-17. [디버그 쉘](https://www.notion.so/17-28e1400eefa58052afa3e112816f3d3f?pvs=21)
+1. [도커 & 쿠버네티스 소개](https://www.notion.so/1-2731400eefa5802b84c6d16aff216525?source=copy_link)
+2. [쿠버네티스 설치](https://www.notion.so/2-2731400eefa580f9a430ce1eae2e0aa2?source=copy_link)  
+3. [시작하기 - 컨테이너 실행하기](https://www.notion.so/3-2761400eefa580139f18dbab34b57729?source=copy_link)  
+4. [쿠버네티스 아키텍처](https://www.notion.so/4-2771400eefa580e08544cd37bdae99da?source=copy_link)  
+5. [파드(Pod)](https://www.notion.so/5-Pod-2771400eefa580dfb08cce4e4828fa5b?source=copy_link)  
+6. [워크로드 리소스](https://www.notion.so/6-2791400eefa580769e58dfca96cbe051?source=copy_link)  
+7. [쿠버네티스 서비스](https://www.notion.so/7-27a1400eefa580dea62cf82ee0a98ae5?source=copy_link)  
+8. [인그레스(Ingress)](https://www.notion.so/8-27d1400eefa5807e9eb2c27b77ba81ba?source=copy_link)  
+9. [라벨과 어노테이션 *](https://www.notion.so/9-27e1400eefa58050bea1f9b3ff32b9c8?source=copy_link)  
+10. [컨피그 맵(ConfigMap)](https://www.notion.so/10-ConfigMap-27f1400eefa580a8b8d4fb38b9e75369?source=copy_link)  
+11. [시크릿(Secret) *](https://www.notion.so/11-Secret-2801400eefa5804c95d0e7eff4f8ee33?source=copy_link)
+12. [스토리지(Storage)](https://www.notion.so/12-Storage-2801400eefa5805685c3ce35bc5a1f3b?source=copy_link)
+13. [오토스케일링](https://www.notion.so/13-28b1400eefa5801a859fe1e62b14c4d2?source=copy_link)
+14. [파드 스케줄링 *](https://www.notion.so/14-28b1400eefa580948783d6aa34c33296?source=copy_link)
+15. [인증과 권한관리](https://www.notion.so/15-28c1400eefa5808c8ff1e3b6ba378c44?source=copy_link)
+16. [헬름과 커스터마이즈](https://www.notion.so/16-28d1400eefa580f4b623d62590326e83?source=copy_link)
+17. [디버그 쉘](https://www.notion.so/17-28e1400eefa58052afa3e112816f3d3f?source=copy_link)
 
-[미니 프로젝트](https://www.notion.so/28e1400eefa58082bfdbd6d7976164df?pvs=21)
+[미니 프로젝트](https://www.notion.so/28f1400eefa580ec844ed222c7a2e3c5?source=copy_link)
 
-=> 노션 게시해야됨
 ---
 
 ## 📖 소개
